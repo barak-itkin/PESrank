@@ -1,7 +1,7 @@
 import ESrank
 import BS
 import math
-import random
+import uuid
 import time
 
 def keyBoard(word):
@@ -86,8 +86,8 @@ def unLeetWord(word):
 
 def main(username,password,path):
     r=rank(password,path)
-    rand=random.randrange(10**7)
-    f=open(path+"/out/"+str(rand)+".txt","w")
+    y=str(uuid.uuid1())
+    f=open(path+"/out/"+str(y)+".txt","w")
     f.write(username+","+str(math.log2(r))+","+str(time.asctime())+"\n")
     f.close()
 
@@ -172,7 +172,6 @@ def rank(password,path):
     return L
 
 
-main("333","password","../barak")
 
 
 
