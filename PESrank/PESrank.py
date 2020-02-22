@@ -1,10 +1,10 @@
 import os
-import ESrank
-import BS
 import math
-import uuid
 import time
-import rank_config
+import uuid
+from . import ESrank
+from . import BS
+from . import rank_config
 
 
 def keyBoard(word):
