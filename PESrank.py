@@ -13,7 +13,7 @@ def keyBoard(word):
     return True
 
 def isSymbol(c):
-    return (c in "!~@#$%^&*()_+?><.,;:'{}[]=-|\/ ") or (c=='"')
+    return (c in r"!~@#$%^&*()_+?><.,;:'{}[]=-|\/ ") or (c=='"')
 
 def isShifted(c):
     if c.isalpha():
