@@ -44,6 +44,10 @@ def unShiftWord(word):
     return p, str(tuple(lst))
 
 
+def isascii(value):
+    return all(ord(c) < 128 for c in value)
+
+
 def unLeetWord(word):
     lst = []
     if "0" in word:
@@ -111,7 +115,7 @@ def rank(password, path):
     last = True
     f = len(password)
     l = -1
-    if (password.isascii()):
+    if (isascii(password)):
         for i in range(len(password)):
             if (not (password[i].isdigit() or isSymbol(password[i]))) and (first == True):
                 f = i
